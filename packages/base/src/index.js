@@ -71,6 +71,18 @@ module.exports = {
     'func-name-matching': 'error',
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
+    'id-denylist': [
+      'error', // this sets this rule to error, the rest are the forbidden IDs
+      'err',
+      'cb',
+      'callback',
+      'req',
+      'res',
+    ],
+    'id-length': [
+      'error',
+      { min: 2, properties: 'never', exceptionPatterns: ['[i-k]', '[x-z]'] },
+    ],
     'lines-between-class-members': 'error',
     'max-statements-per-line': [
       'error',
