@@ -72,13 +72,16 @@ module.exports = {
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
     'id-denylist': [
-      'error', // this sets this rule to 'error', the rest are the forbidden IDs
+      // This sets this rule to 'error', the rest are the forbidden IDs.
+      'error',
+      // These are basically all useless contractions.
       'buf',
       'err',
       'cb',
       'cfg',
       'hex',
       'msg',
+      'num',
       'opt',
       'str',
     ],

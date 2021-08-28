@@ -91,6 +91,7 @@
     "cfg",
     "hex",
     "msg",
+    "num",
     "opt",
     "str"
   ],
