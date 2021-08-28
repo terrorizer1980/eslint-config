@@ -504,9 +504,9 @@ function populateRecommendedRules(configArray) {
  * Prettier violations.
  */
 function logPrettierViolations(prettierViolations) {
-  let str = `\nError: Detected Prettier rule violations. Disable the specified rule(s) in the following package(s):\n`;
-  str += getViolationsString(prettierViolations);
-  console.error(str);
+  let message = `\nError: Detected Prettier rule violations. Disable the specified rule(s) in the following package(s):\n`;
+  message += getViolationsString(prettierViolations);
+  console.error(message);
 }
 
 /**
@@ -517,9 +517,9 @@ function logPrettierViolations(prettierViolations) {
  * minimalism violations.
  */
 function logMinimalismViolations(minimalismViolations) {
-  let str = `\nError: Detected redundantly configured rules. Remove the specified rule(s) in the following package(s):\n`;
-  str += getViolationsString(minimalismViolations);
-  console.error(str);
+  let message = `\nError: Detected redundantly configured rules. Remove the specified rule(s) in the following package(s):\n`;
+  message += getViolationsString(minimalismViolations);
+  console.error(message);
 }
 
 /**
@@ -531,15 +531,15 @@ function logMinimalismViolations(minimalismViolations) {
  * @returns {string} A formatted string listing the violations.
  */
 function getViolationsString(violationsMap) {
-  let str = '';
+  let message = '';
   Object.entries(violationsMap).forEach(([packageName, violatedRules]) => {
     if (violatedRules.length > 0) {
-      str += `\n${tabs(1)}${packageName}\n${tabs(2)}${violatedRules
-        .sort()
-        .join(`\n${tabs(2)}`)}\n`;
+      message += `\n${tabs(1)}${packageName}\n${tabs(
+        2,
+      )}${violatedRules.sort().join(`\n${tabs(2)}`)}\n`;
     }
   });
-  return str;
+  return message;
 }
 
 /**

@@ -85,11 +85,14 @@
   "guard-for-in": "error",
   "id-denylist": [
     "error",
+    "buf",
     "err",
     "cb",
-    "callback",
-    "req",
-    "res"
+    "cfg",
+    "hex",
+    "msg",
+    "opt",
+    "str"
   ],
   "id-length": [
     "error",
@@ -98,7 +101,8 @@
       "properties": "never",
       "exceptionPatterns": [
         "[i-k]",
-        "[x-z]"
+        "[x-z]",
+        "[r-v]"
       ]
     }
   ],

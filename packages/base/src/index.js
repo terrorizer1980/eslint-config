@@ -72,16 +72,23 @@ module.exports = {
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
     'id-denylist': [
-      'error', // this sets this rule to error, the rest are the forbidden IDs
+      'error', // this sets this rule to 'error', the rest are the forbidden IDs
+      'buf',
       'err',
       'cb',
-      'callback',
-      'req',
-      'res',
+      'cfg',
+      'hex',
+      'msg',
+      'opt',
+      'str',
     ],
     'id-length': [
       'error',
-      { min: 2, properties: 'never', exceptionPatterns: ['[i-k]', '[x-z]'] },
+      {
+        min: 2,
+        properties: 'never',
+        exceptionPatterns: ['[i-k]', '[x-z]', '[r-v]'],
+      },
     ],
     'lines-between-class-members': 'error',
     'max-statements-per-line': [
