@@ -86,10 +86,12 @@
   "id-denylist": [
     "error",
     "buf",
+    "cat",
     "err",
     "cb",
     "cfg",
     "hex",
+    "int",
     "msg",
     "num",
     "opt",

@@ -76,10 +76,12 @@ module.exports = {
       'error',
       // These are basically all useless contractions.
       'buf',
+      'cat',
       'err',
       'cb',
       'cfg',
       'hex',
+      'int',
       'msg',
       'num',
       'opt',
