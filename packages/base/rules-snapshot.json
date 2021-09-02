@@ -103,9 +103,9 @@
       "min": 2,
       "properties": "never",
       "exceptionPatterns": [
-        "[i-k]",
-        "[x-z]",
-        "[r-v]"
+        "i",
+        "j",
+        "k"
       ]
     }
   ],
